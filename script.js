@@ -27,7 +27,7 @@ searchBtn.addEventListener("click", () => {
     }
 
     locationTitle.innerText =
-        `A Feast For the Eyes In ${formattedLocation}`;
+        `A Feast For The Eyes In ${formattedLocation}`;
 
     generateCards(location, formattedLocation);
 
