@@ -82,7 +82,10 @@ async function generateCards(location, formattedLocation){
                 <div class="card-overlay">
 
                     <h3>
-                        ${photo.alt_description || `Attraction ${index + 1}`}
+                        ${photo.alt_description
+                          ? photo.alt_description.charAt(0).toUpperCase() +
+                          photo.alt_description.slice(1)
+                          : `Attraction ${index + 1}`}`}
                     </h3>
 
                     <p>
