@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Weather Assistant</title>
+
+    <link rel="stylesheet" href="weather.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="chat-box">
+
+            <h1 class="chat-title">
+                🌤 Travel Weather Assistant
+            </h1>
+
+            <div class="bot-message">
+                Hello Traveller! Please enter your trip details below.
+            </div>
+
+            <form id="weatherForm">
+
+                <div class="form-group">
+                    <label for="people">
+                        How many people are travelling?
+                    </label>
+
+                    <input
+                        type="number"
+                        id="people"
+                        placeholder="Enter number of travellers"
+                        min="1"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="city">
+                        Destination
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter destination city"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="date">
+                        Arrival Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+                </div>
+
+                <button type="submit">
+                    Get Weather
+                </button>
+
+            </form>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+    <script src="weather.js"></script>
+
+</body>
+</html>
