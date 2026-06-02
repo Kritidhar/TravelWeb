@@ -210,3 +210,25 @@ body{
     margin-bottom:20px;
 }
 
+.weather-section{
+    text-align:center;
+    margin:40px 0;
+}
+
+.weather-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#3498db;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.weather-btn:hover{
+    background:#2980b9;
+    transform:translateY(-3px);
+}
+
