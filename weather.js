@@ -49,14 +49,17 @@ document
         </div>
     `;
 
-} catch(error) {
+} 
+    catch(error) {
 
     console.error(error);
 
     resultDiv.style.display = "block";
 
     resultDiv.innerHTML = `
-        <h2> Error</h2>
+        <h2>Error</h2>
         <p>${error.message}</p>
     `;
+}
+
 });
