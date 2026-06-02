@@ -5,6 +5,9 @@ document
 
     e.preventDefault();
 
+    // API KEY 
+const ACCESS_KEY = "";
+
     const people = document.getElementById("people").value;
     const city = document.getElementById("city").value.trim();
     const date = document.getElementById("date").value;
