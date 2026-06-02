@@ -210,25 +210,32 @@ body{
     margin-bottom:20px;
 }
 
-.weather-section{
-    text-align:center;
-    margin:40px 0;
+.weather-btn-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:50px 0;
 }
 
 .weather-btn{
     display:inline-block;
     padding:15px 35px;
-    background:#3498db;
+    background:linear-gradient(135deg, #3498db, #2980b9);
     color:white;
     text-decoration:none;
-    border-radius:30px;
     font-size:18px;
     font-weight:600;
-    transition:0.3s;
+    border-radius:50px;
+    box-shadow:0 8px 20px rgba(52, 152, 219, 0.3);
+    transition:all 0.3s ease;
 }
 
 .weather-btn:hover{
-    background:#2980b9;
-    transform:translateY(-3px);
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(52, 152, 219, 0.5);
+}
+
+.weather-btn:active{
+    transform:translateY(-2px);
 }
 
