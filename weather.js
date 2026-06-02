@@ -17,49 +17,45 @@ document
 
     try {
 
-       const response = await fetch(
-    `/api/weather?city=${city}`
-);
+    const response = await fetch(
+        `/api/weather?city=${city}`
+    );
 
-const data = await response.json();
+    const data = await response.json();
 
-if (!response.ok) {
-    throw new Error(data.error || data.message || "API Request Failed");
-}
-}
+    console.log(data);
 
-      const data = await response.json();
+    if (!response.ok) {
+        throw new Error(
+            data.error ||
+            data.message ||
+            "Unable to fetch weather"
+        );
+    }
 
-      // RESULT 
-      resultDiv.innerHTML = `
+    resultDiv.style.display = "block";
+
+    resultDiv.innerHTML = `
         <h2>🌤 Weather in ${data.name}</h2>
 
         <div class="weather-card">
-          <p><strong>👥 Travellers:</strong> ${people}</p>
-          <p><strong>📅 Arrival Date:</strong> ${date}</p>
-          <p><strong>🌡 Temperature:</strong> ${data.main.temp}°C</p>
-          <p><strong>☁ Condition:</strong> ${data.weather[0].description}</p>
-          <p><strong>💧 Humidity:</strong> ${data.main.humidity}%</p>
-          <p><strong>💨 Wind Speed:</strong> ${data.wind.speed} m/s</p>
-
-          <hr>
-
-          <h3> Travel Suggestions </h3>
-          <p>✓ Carry a water bottle</p>
-          <p>✓ Check local attractions before travelling</p>
-          <p>✓ Pack clothes according to weather conditions</p>
+            <p><strong>👥 Travellers:</strong> ${people}</p>
+            <p><strong>📅 Arrival Date:</strong> ${date}</p>
+            <p><strong>🌡 Temperature:</strong> ${data.main.temp}°C</p>
+            <p><strong>☁ Condition:</strong> ${data.weather[0].description}</p>
+            <p><strong>💧 Humidity:</strong> ${data.main.humidity}%</p>
+            <p><strong>💨 Wind Speed:</strong> ${data.wind.speed} m/s</p>
         </div>
-      `;
-    // ERROR HANDLING
+    `;
 
-    } catch (error) {
+} catch(error) {
 
-      console.error(error);
+    console.error(error);
 
-      resultDiv.innerHTML = `
+    resultDiv.style.display = "block";
+
+    resultDiv.innerHTML = `
         <h2> Error</h2>
         <p>${error.message}</p>
-      `;
-    }
-
-});
+    `;
+}
