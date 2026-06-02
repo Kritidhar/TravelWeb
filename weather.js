@@ -19,11 +19,12 @@ document
     try {
 
        const response = await fetch(
-    `/api/config?location=${location}`);
+    `/api/weather?city=${city}`
+);
 
-    if(!response.ok){
-            throw new Error("API Request Failed");
-        }
+if(!response.ok){
+    throw new Error("API Request Failed");
+}
 
       const data = await response.json();
 
