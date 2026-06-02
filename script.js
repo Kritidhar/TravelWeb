@@ -87,7 +87,6 @@ async function generateCards(location, formattedLocation){
 
                     <p>
                         Discover beautiful places in ${formattedLocation}.
-                        Click below to explore your trip.
                     </p>
 
                 </div>
