@@ -1,5 +1,4 @@
 
-const apiKey = "";
 document
   .getElementById("weatherForm")
   .addEventListener("submit", async function (e) {
@@ -22,8 +21,11 @@ document
     `/api/weather?city=${city}`
 );
 
-if(!response.ok){
-    throw new Error("API Request Failed");
+const data = await response.json();
+
+if (!response.ok) {
+    throw new Error(data.error || data.message || "API Request Failed");
+}
 }
 
       const data = await response.json();
